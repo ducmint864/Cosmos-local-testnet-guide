@@ -259,4 +259,4 @@ validators:
     key: /VRvqELNJhOe+u5ty1nft2INkhLo7lu/7RljxQJPoO0=
   voting_power: "10000"
 ```
-NOTE: Looking at the pubkey value of first validator: ``g3u70aVnX6B4CaeQuf+zE6qOTEyS12jl5Wnphn/kLLM``, we can indeed verify that it matches with node2 validator's pubkey. So node2 has been successfully registered as a validator of the chain
+NOTE: Apparently, the pubkey value of the first validator in the output is: ``g3u70aVnX6B4CaeQuf+zE6qOTEyS12jl5Wnphn/kLLM``, we can indeed verify that it matches with node2 validator's pubkey, so node2 has been successfully registered as a validator of the chain.
