@@ -31,7 +31,7 @@ testchaind
 ```
 
 | `
-From now on, we will assume that your application-name was testchain. Therefore, the binary cli file should be testchaind
+From now on, we will assume that your application-name was testchain. Therefore, the binary cli file would be testchaind
 `|
 ## 3. Setup testnet environment
 ### 3.1 Create testnet folder and nodes folder
@@ -73,14 +73,31 @@ Add the generated gentx transaction to genesis.json:
 ```bash
 testchaind genesis collect-gentxs --home node1/node1home/ --trace
 ```
-## 7. Start the chain node (run single-node)
-Before you start, the api server and swagger should be enabled. Go to the **node1/node1home/config/app.toml** to change those options as follow:
-/image here
+## 7. Start chain on node1
+Before running 2 nodes, it's vital to get a single node up n running first.
+The first step to operating a node is to modify its config.
+Notably, the 'api server' and 'swagger' options should be enabled in the application config. Go to the **node1/node1home/config/app.toml** to change those options as follow:
+```toml
+###############################################################################
+###                           API Configuration                             ###
+###############################################################################
 
-Give a value to min gas price config variable of the chain which is left blank by default. Open the file **node1/node1home/config/app.toml** and set variable **minimum-gas-prices** to your desired value. For example:
+[api]
+
+# Enable defines if the API server should be enabled.
+enable = true
+
+# Swagger defines if swagger documentation should automatically be registered.
+swagger = true
+
+```
+
+In the same **node1/node1home/config/app.toml** file, provide a concrete a value for minimum gas price chain parameter which is left blank by default. For example:
 ```toml
 minimum-gas-prices = "0.1stake"
 ```
+NOTE: Keep in mind that you can put your desired value. Nevertheless, "0.1stake" is a decent starting point for test-oriented chain.
+
 Then start the chain:
 ```bash
 testchaind start --home node1/node1home
