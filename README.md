@@ -2,10 +2,19 @@
 
 ## 1. Prerequisites
 ``
-Ignite CLI
+Golang
+``
+``
+Ignite CLI 0.28
+``
+``
+/home/<your-username>/go/bin added to PATH
+``
+``
+/usr/local/go/bin added to PATH
 ``
 
-## 2. Initialize your chain
+## 2. Create a test blockchain application using Ignite CLI
 
 Create a binary in your terminal:
 ```bash
@@ -15,19 +24,19 @@ Example:
 ```bash
 ignite scaffold chain testchain
 ```
-Build the application chain:
+Build the chain:
 ```bash
 cd <application-name>
 ignite chain build
 ```
-Cosmos SDK will automatically create an executable binary cli file, and we can use it as a command:
+Cosmos SDK will automatically produce an executable binary CLI file, and we can use it as a command:
 ```bash
 <application-name>d
 
-* If application-name is testchain, then the command would be:
+* For example, if application-name is testchain, the command would be:
 testchaind
 
-* If the command is not recognized by the system, add go/bin go your path as cosmos put the binary file in /go/bin by default
+* If the command is not recognized by the system, add /home/<your-username/go/bin/ go your PATH env variable as cosmos put the binary file in /home/<your-username>/go/bin/ by default
 ```
 
 | `
@@ -171,7 +180,7 @@ persistent_peers="<node1-ID>@127.0.0.1:26656"
 ```bash
 testchaind comet show-node-id --home node1/node1home/
 ```
-### 8.3 Start node2
+### 8.3 Start running
 Before running node2, you should start node1 (if it hasn't been started yet) or restart (if it's been closed):
 ```bash
 testchaind start --home node1/node1home/
