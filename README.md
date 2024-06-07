@@ -103,7 +103,7 @@ Then start the chain:
 testchaind start --home node1/node1home
 ```
 
-## 8. Config node2 to sync with the blockchain on node1
+## 8. Start chain on node2 and sync it with node1
 ### 8.1 Copy chain configuration from node1 to node2
 First of all, go back to ~/testnet folder:
 ```bash
@@ -183,7 +183,7 @@ testchaind start --home node2/node2home/
 NOTE: in local development, if using 127.0.0.1 and the node throws an error, you can try `localhost instead.
 
 **At this point, the screen output of the 2 nodes should be in sync**
-## 9. Run node2 as a validator (optional)
+## 9. Upgrade node2's role to Validator (optional)
 ##### This section is aimed at upgrading the role of node2 from normal participant node to a validator node for our blockchain
 ### 9.1 Create a validator_info.json file
 [WHY?] Because the command we're gonna use to make node2 a validator is ``testchaind tx staking create-validator``. That command requires a .json file which entails information about the new validator to be passed in as command argument. Therefore, we go ahead to create a .json file:
