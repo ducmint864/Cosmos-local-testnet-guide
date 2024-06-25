@@ -101,7 +101,7 @@ swagger = true
 
 ```
 
-In the same **node1/node1home/config/app.toml** file, provide a concrete a value for minimum gas price chain parameter which is left blank by default. For example:
+In the same **node1/node1home/config/app.toml** file, provide a concrete value for the 'minimum-gas-price' chain parameter which is left blank by default. For example:
 ```toml
 minimum-gas-prices = "0.1stake"
 ```
