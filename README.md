@@ -219,13 +219,13 @@ Put this json bundle into validator_info.json file, the file's content would loo
 NOTE: you have to replace ``NODE2-VALIDATOR-PUBKEY`` with the real pubkey of node2's validator account. A convenient way to retrieve such pubkey is to run ``gentx`` command on node2-account and then copy the validator's pubkey from the result file. The steps are as follow:
 Run gentx command first:
 ```bash
-testchaind genesis gentx node2-account 10000000000stake --home node2/node2home/
+testchaind genesis gentx node2-account 10000000000stake --home ./node2home/
 
-Output>  Genesis transaction written to "node2/node2home/config/gentx/gentx-98eae84d5327de5857952c909eb1ac1ce3d3bd6f.json"
+Output>  Genesis transaction written to "node2home/config/gentx/gentx-98eae84d5327de5857952c909eb1ac1ce3d3bd6f.json"
 ```
 Open the result file
 ```bash
-nano node2/node2home/config/gentx/gentx-98eae84d5327de5857952c909eb1ac1ce3d3bd6f.json
+nano ./node2home/config/gentx/gentx-98eae84d5327de5857952c909eb1ac1ce3d3bd6f.json
 ```
 There should be a pubkey field like this in the result file:
 ```json
@@ -234,7 +234,7 @@ There should be a pubkey field like this in the result file:
 					"key": "g3u70aVnX6B4CaeQuf+zE6qOTEyS12jl5Wnphn/kLLM="
 				},
 ```
-Copy the key. In my case it was: ``g3u70aVnX6B4CaeQuf+zE6qOTEyS12jl5Wnphn/kLLM=``
+Copy the key. In this case it is: ``g3u70aVnX6B4CaeQuf+zE6qOTEyS12jl5Wnphn/kLLM=``
 
 Now re-open the **node2/validator_info.json** file and replace ``NODE2_VALIDATOR-PUBKEY`` with real value above:
 ```json
