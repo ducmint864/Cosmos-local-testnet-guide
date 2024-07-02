@@ -128,7 +128,7 @@ Copy all the config files from node1 to node2 by running the below command:
 cp node1/node1home/config/{genesis.json,config.toml,app.toml,client.toml} node2/node2home/config/
 ```
 
-Change every ports in these 3 .toml files to differ from those of node1
+Change every network port found in the 3 .toml files above to differ from the original ports occupied by node1
 * Open **node2/node2home/config/app.toml**  file and edit ports as follow:
 ```toml
 # Address defines the API server to listen on.
