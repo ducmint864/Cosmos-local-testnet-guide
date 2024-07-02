@@ -256,7 +256,7 @@ Now re-open the **node2/validator_info.json** file and replace ``NODE2_VALIDATOR
 ### 9.2 Add validator
 To add node2 as a validator, run command:
 ```bash
-testchaind tx staking create-validator node2/validator_info.json --from node2-account --home ./node2home --fees 100000stake --chain-id testchain
+testchaind tx staking create-validator ./validator_info.json --from node2-account --home ./node2home --fees 100000stake --chain-id testchain
 ```
 
 ### 9.3 Verify that node2 has been added to the validator list of the chain
